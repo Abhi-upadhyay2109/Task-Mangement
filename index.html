@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Management Application</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<h1>Task Management</h1>
+
+<!-- Task Form -->
+<div class="task-form">
+  <h3>Add a Task</h3>
+  <div class="form-group">
+    <label for="taskTitle">Title:</label>
+    <input type="text" id="taskTitle" required>
+  </div>
+  <div class="form-group">
+    <label for="taskDescription">Description:</label>
+    <textarea id="taskDescription" required></textarea>
+  </div>
+  <div class="form-group">
+    <label for="taskStatus">Status:</label>
+    <select id="taskStatus" required>
+      <option value="Pending">Pending</option>
+      <option value="In Progress">In Progress</option>
+      <option value="Completed">Completed</option>
+    </select>
+  </div>
+  <button onclick="addTask()">Add Task</button>
+</div>
+
+<!-- Filter and Task List -->
+<div class="controls">
+  <button onclick="filterTasks('All')">All</button>
+  <button onclick="filterTasks('Pending')">Pending</button>
+  <button onclick="filterTasks('In Progress')">In Progress</button>
+  <button onclick="filterTasks('Completed')">Completed</button>
+</div>
+
+<ul id="taskList" class="task-list"></ul>
+
+<script src="index.js"></script>
+
+</body>
+</html>
